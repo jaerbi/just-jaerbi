@@ -29,7 +29,7 @@
     "max-classes-per-file": false,
     "max-line-length": [
       true,
-      140
+      160
     ],
     "member-access": false,
     "member-ordering": [
@@ -53,9 +53,19 @@
       "trace"
     ],
     "no-empty": false,
+    // my rules
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "allow-pascal-case"
+      ]
+    },
     "no-inferrable-types": [
       true,
       "ignore-params"
+      //      "ignore-properties"
     ],
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
@@ -73,6 +83,7 @@
       "single"
     ],
     "trailing-comma": false,
+    "no-trailing-whitespace": false,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,

@@ -1,0 +1,23 @@
+<p>Change Detection Strategy OnPush</p>
+
+<button routerLink="user">User</button>
+
+<form #f="ngForm">
+  <input
+    type="text"
+    name="title"
+    required
+    ngModel
+  >
+
+  <button
+    [disabled]="!f.valid"
+    type="submit"
+    class="btn-primary"
+    (click)="onAddClick(f)"
+  >Add Todo</button>
+</form>
+
+
+<app-users [todos]="todos"></app-users>
+
