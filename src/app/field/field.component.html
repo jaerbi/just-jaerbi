@@ -1,1 +1,6 @@
-<p>field works!</p>
+<button class="btn-primary" (click)="onChange()">Change</button>
+<ul>
+  <li *ngFor="let item of items; trackBy: trackHero">
+    {{ item.title }}
+  </li>
+</ul>

@@ -4,7 +4,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { FieldComponent } from './field/field.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/users-list', pathMatch: 'full' },
+  { path: '', redirectTo: '/field', pathMatch: 'full' },
   { path: 'field', component: FieldComponent },
   { path: 'users-list', loadChildren: './users-list/users-list.module#UsersListModule' }
 ];

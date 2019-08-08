@@ -1,2 +1,2 @@
-<app-user *ngFor="let todo of todos; let i = index" [todo]="todo" [number]="i"></app-user>
+<app-user *ngFor="let todo of todos; let i = index; trackById" [todo]="todo" [number]="i"></app-user>
 
