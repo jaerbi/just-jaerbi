@@ -52,6 +52,13 @@ button {
   }
 }
 
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+  background-color: var(--primary-color);
+}
+
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--light-color);

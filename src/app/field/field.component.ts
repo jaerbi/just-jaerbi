@@ -1,31 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Todo } from '../services/pract/todo.model';
+import { Cell } from './cell/cell.model';
 
 @Component({
   selector: 'app-field',
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.scss']
 })
-export class FieldComponent {
+export class FieldComponent implements OnInit {
 
-  items = [
-    new Todo('AAAA'),
-    new Todo('BBBB'),
-    new Todo('CCCC'),
-  ];
+  fields: Cell[] = [];
 
-  onChange() {
-    this.items = [
-      new Todo('AAAA'),
-      new Todo('BBBB'),
-      new Todo('CCCC'),
-      new Todo('FFFF'),
-    ];
+  ngOnInit(): void {
+
+    for (let i = 0; i < 10000; i++) {
+      this.fields.push(new Cell(i, i));
+    }
+    console.log(this.fields);
   }
 
-  trackHero(item) {
-    return item.title;
-  }
 
 }
